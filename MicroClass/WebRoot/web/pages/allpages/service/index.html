@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>课堂内容</title>
+    <script src="js/jquery-1.4.2.min.js"></script>
+    <link rel="stylesheet" href="css/animate.min.css">
+    <style type="text/css">
+        *{margin:0;padding:0;}
+        body{background: #ffffff;font-size:12px;font-family:"微软雅黑";}
+
+        .course{width:1024px;height:680px;margin:30px auto;}
+        .course .course_box{width:255px;height:155px;background:#FFCC66;float:left;margin-left:1px;
+            cursor:pointer;margin-bottom:20px;color:#fff;position:relative;
+        }
+        .course .course_box h3{font-size:24px;font-weight:300;text-align:center;margin-top:63px;}
+        .course .course_box p{width:255px;height:155px;position:absolute;left:0;top:0;padding:10px;background:#000;opacity:0.5;
+            filter:alpha(opacity=50);display:none;
+        }
+        .course .course_box p span{display:block;margin-top:2px;padding:2px;}
+        .course .course_box p .course_title{font-size:22px;}
+        .course .tz_blue{background:#2d8af1;}
+        .course .tz_red{background:#D44825;}
+        .course .tz_gray{background:#666;}
+        .course .tz_org{background:#ff6e1a;}
+        .course .tz_lv{background:#0cc5e7;}
+        .course .tz_qing{background:#64d500;}
+        .course .tz_yellow{background:#d5c300;}
+        .course .tz_blue{background:#2d8af1;}
+        .course .tz_bluees{background:#2a45f1;}
+        .course .tz_redd{background:#D44835;}
+        .course .tz_grayy{background:black;}
+        .course .tz_orgg{background:#ff6e4a;}
+        .course .tz_lvv{background:#0cc5a7;}
+        .course .tz_qingg{background:#64c500;}
+        .course .tz_yelloww{background:#d45300;}
+        .course .tz_bluee{background:#2ddff1;}
+
+        .top{
+            height: 60px;
+            width: 100%;
+            background-color: #f3f3f3;
+            box-shadow: 2px 2px 2px #dcdcdc;
+        }
+        .top .top-left{
+            line-height: 60px;
+            margin-left: 30px;
+        }
+        .top .top-left a{
+            margin-right: 20px;
+            font-size: 20px;
+            display: inline-block;
+            float: left;
+        }
+        .top .top-left a:hover{
+           color: salmon;
+        }
+        .top .top-rigth{
+            float: left;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+
+        }
+        .top .top-rigth .btn2,
+        .top .top-rigth .btn1{
+            margin-left: 20px;
+            color: darkcyan;
+        }
+        .logo a img{
+            margin-right: 25px;
+
+            margin-top: 20px;
+        }
+        .logo input:hover{
+            color: #d0e9c6;
+        }
+    </style>
+</head>
+<body>
+<div class="top">
+    <div class="top-left ">
+        <a href="">首页</a>
+        <a href="">微课堂大纲</a>
+        <a href="">实战演练</a>
+        <a href="">专栏项目</a>
+        <a href="">免费课程</a>
+        <a href="">笔记资料</a>
+    </div>
+    <div class="logo" style="float: right;margin-right: 170px">
+
+        <a href="" ><img src="img/sousuo.png"  alt="" ></a>
+        <a href=""><img src="img/gouwuche.png" alt=""></a>
+    </div>
+    <input type="text" placeholder="搜索您感兴趣的内容" style="display: inline-block;float: right;margin-top: 20px;margin-right: 10px;padding: 4px">
+
+   <div class="top-rigth">
+       <button class="btn1">登录</button>
+       <button class="btn2">注册</button>
+   </div>
+
+</div>
+<div class="course">
+    <div class="course_box tz_blue">
+        <h3>Java</h3><p class="desc">
+        <span class="course_title"><a href="http://www.baidu.com/">Java</a></span>
+        <span>·简单的Java程序<br>·Java中的变量与数据类型<br>·运算符、表达式与语句<br>·循环与选择结构<br>·数组与方法的使用</span></p></div>
+    <div class="course_box tz_red"><h3>.net</h3><p class="desc">
+        <span class="course_title">.net</span>
+        <span>ASP.NET基本控件,数据绑定控件,ASP.NET中的Ajax开发,数据安全技术</span></p></div>
+    <div class="course_box tz_gray"><h3>Web</h3><p class="desc">
+        <span class="course_title">Web</span>
+        <span>JavaScript、ActionScript、CSS、xHTML</span></p></div>
+    <div class="course_box tz_org"><h3>c++</h3><p class="desc">
+        <span class="course_title">c++</span>
+        <span>数据类型与表达式 、数组、指针  类和对象 继承与派生 多态与虚函数</span></p></div>
+    <div class="course_box tz_lv"><h3>UI</h3><p class="desc">
+        <span class="course_title">UI</span>
+        <span>图形设计、交互设计、用户测试</span></p></div>
+    <div class="course_box tz_qing"><h3>Datebase</h3><p class="desc">
+        <span class="course_title">Datebase</span>
+        <span>SQL2008 MYSQL oracle SQLite ACCESS常用数据库的安装与卸载</span></p></div>
+    <div class="course_box tz_yellow"><h3>Android</h3><p class="desc">
+        <span class="course_title">Android</span>
+        <span>数据存储、线程通信、Android组件、电话技术</span></p></div>
+    <div class="course_box tz_blue"><h3>iOS</h3><p class="desc">
+        <span class="course_title">iOS</span>
+        <span>熟悉 Mac Fundamental</span></p></div>
+    <div class="course_box tz_bluees"><h3>PS</h3><p class="desc">
+        <span class="course_title">PS</span>
+        <span>文字效果，图片处理</span></p></div>
+    <div class="course_box tz_redd"><h3>PR</h3><p class="desc">
+        <span class="course_title">PR</span>
+        <span>熟悉常用操作、特效、转场</span></p></div>
+    <div class="course_box tz_grayy"><h3>SEO</h3><p class="desc">
+        <span class="course_title">SEO</span>
+        <span>为网站提供生态式的自我营销解决方案，让网站在行业内占据领先地位，从而获得品牌收益
+    3DS MAX 三维物体建模和动画制作软件具有强大、完美的三维建模</span></p></div>
+    <div class="course_box tz_orgg"><h3>Unity3D</h3><p class="desc">
+        <span class="course_title">Unity3D</span>
+        <span>三维视频游戏、建筑可视化、实时三维动画等类型互动内容的多平台的综合型游戏开发</span></p></div>
+    <div class="course_box tz_lvv"><h3>数据库</h3><p class="desc">
+        <span class="course_title">云计算/大数据</span>
+        <span>Hadoop\Spark\Hbase\Strom</span></p></div>
+    <div class="course_box tz_qingg"><h3>torrent</h3><p class="desc">
+        <span class="course_title">torrent</span>
+        <span>种子</span></p></div>
+    <div class="course_box tz_yelloww"><h3>LOL</h3><p class="desc">
+        <span class="course_title">游戏</span>
+        <span>Untiy 3D、Cocos2d-x</span></p></div>
+    <div class="course_box tz_bluee"><h3>高级软件工程师</h3><p class="desc">
+        <span class="course_title">高级软件工程师</span>
+        <span>高级软件工程师</span></p></div>
+</div>
+<script type="text/javascript">
+    $(function(){
+        $(".course_box").hover(function(){
+            $(this).addClass("animated swing");
+            $(this).find(".desc").show().removeClass("fadeOut").addClass("animated fadeIn");
+        },function(){
+            $(this).removeClass("animated swing");
+            $(this).find(".desc").hide().remoceClass("fadeIn").addClass("animated fadeOut");
+        });
+    });
+</script>
+</body>
+</html>

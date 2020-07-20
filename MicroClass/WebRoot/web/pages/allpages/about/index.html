@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>课程介绍</title>
+    <!-- 引入Bootstrap核心样式文件（必须） -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        body{
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color: #000;
+        }
+
+        #lk_header .top-bar{
+            height: 40px;
+            line-height: 29px;
+            /*border-bottom: 1px solid #e0e0e0;*/
+            /*margin-bottom: 30px;*/
+        }
+        #lk_header .top-bar .top-bar-1{
+            margin-top: 5px;
+        }
+        #lk_header .top-bar .top-bar-1 div>span:hover{
+           color: darkcyan;
+        }
+        #lk_header .top-bar .top-bar-2 .top-bar-1-1{
+            margin-top: 5px;
+        }
+        #lk_header .top-bar .top-bar-1 span{
+            margin-right: 30px;
+            font-size: 16px;
+        }
+        #lk_header .top-bar .top-bar-2 .top-bar-1-1 .img1{
+            display: none;
+            position: absolute;
+            left: -20%;
+            top: 15px;
+            padding: 5px;
+        }
+        #lk_header .top-bar .top-bar-2 .top-bar-1-1 a{
+            margin-left: 20px;
+        }
+        #lk_header .top-bar .top-bar-2 .top-bar-1-1 .a-img{
+            position: relative;
+        }
+        #lk_header .top-bar .top-bar-2 .top-bar-1-1 .a-img:hover .img1{
+            display: block;
+            z-index: 100000;
+
+        }
+        .lk_carousel .main{
+            width: 100%;
+            overflow: hidden;
+            height: 100px;
+            background-color: rgba(20, 31, 49, 0.4);
+            /*box-shadow: 2px 2px 2px rgba(20, 31, 49, 0.4);*/
+            padding: 20px;
+        }
+        .lk_carousel .main .btn:hover{
+            background-color:  rgba(20, 31, 49, 0.3);
+        }
+        .lk_carousel .main  .main-top{
+            position: relative;
+        }
+        .lk_carousel .main .main-bottom{
+            position: absolute;
+            left: 240px;
+            top: 50px;
+        }
+        .lk_carousel .main .main-bottom a{
+            margin-right: 20px;
+        }
+
+        .lk_carouse2 .main-2{
+            height: 80px;
+            width: 100%;
+            overflow: hidden;
+            /*border: 1px solid skyblue;*/
+            background-color: rgba(65, 108, 212, 0.01);
+            box-shadow: 3px 3px 3px rgba(94, 44, 169, 0.1);
+        }
+        .lk_carouse2 .main-2 ul li{
+            display: block;
+            float: left;
+            list-style: none;
+            margin-right: 22px;
+            font-size: 20px;
+            line-height: 80px;
+        }
+        .lk_carouse2 .main-2 ul li:hover{
+            color: #8a6d3b;
+        }
+
+        .lk_carouse3 .main-3-1{
+            width: 100%;
+            height: 70px;
+            border-bottom: 1px dotted silver;
+            overflow: hidden;
+        }
+        .lk_carouse3 .main-3-1 ul li{
+
+            list-style: none;
+            float: left;
+            margin-right: 35px;
+            font-size: 17px;
+            line-height: 70px;
+
+        }
+        .lk_carouse3 .main-3-1 ul li:hover{
+           color: #87e9e1;
+        }
+        .lk_carouse3 .main-3-1 ul li:active{
+            color: darkcyan;
+        }
+
+        .lk_carouse3{
+            margin: 30px 0;
+        }
+        .lk_carouse4 .main-4-left a{
+            margin-right: 10px;
+            font-size: 16px;
+        }
+
+        .lk_carouse4 .main-4-left a:hover{
+            color: #8a6d3b;
+        }
+
+
+
+        /*瀑布流*/
+        .main-4-bottom .img_100 img {
+            width: 100%;
+            min-width: 100%;
+        }
+        .main-4-bottom .margin_bottom_15 {
+            margin-bottom: 15px;
+        }
+        .main-4-bottom .text_center {
+            text-align: center;
+        }
+        .main-4-bottom .drag_div {
+            margin-top: 30px;
+            width: 1300px;
+            height: 760px;
+            overflow: hidden;
+            position: relative;
+        }
+        .main-4-bottom .drag_div>div {
+            background: #fff;
+            padding: 5px;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        .main-4-bottom .drag_div>div.one {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 20%;
+            height: 240px;
+        }
+        .main-4-bottom .drag_div>div.two {
+            position: absolute;
+            top: 260px;
+            left: 0;
+            width: 20%;
+            height: 240px;
+        }
+        .main-4-bottom .drag_div>div.three {
+            position: absolute;
+            top: 520px;
+            left: 0;
+            width: 20%;
+            height: 240px;
+        }
+        .main-4-bottom .drag_div>div.four {
+            position: absolute;
+            top: 0;
+            left: 21%;
+            width: 37%;
+            height: 760px;
+        }
+        .main-4-bottom .drag_div>div.five {
+            position: absolute;
+            top: 0;
+            left: 59%;
+            width: 20%;
+            height: 280px;
+        }
+        .main-4-bottom .drag_div>div.six {
+            position: absolute;
+            top: 300px;
+            left: 59%;
+            width: 20%;
+            height: 220px;
+        }
+        .main-4-bottom .drag_div>div.seven {
+            position: absolute;
+            top: 540px;
+            left: 59%;
+            width: 20%;
+            height: 220px;
+        }
+        .main-4-bottom .drag_div>div.eight {
+            position: absolute;
+            top: 0;
+            left: 80%;
+            width: 20%;
+            height: 280px;
+        }
+        .main-4-bottom .drag_div>div.nine {
+            position: absolute;
+            top: 300px;
+            left: 80%;
+            width: 20%;
+            height: 220px;
+        }
+        .main-4-bottom .drag_div>div.ten {
+            position: absolute;
+            top: 540px;
+            left: 80%;
+            width: 20%;
+            height: 220px;
+        }
+        .main-4-bottom .drag_div>div.one img, .drag_div>div.two img, .drag_div>div.three img {
+            width: 100%;
+            height: 180px;
+        }
+        .main-4-bottom .drag_div>div.four img {
+            width: 100%;
+            height: 700px;
+        }
+        .main-4-bottom .drag_div>div.five img, .drag_div>div.eight img {
+            width: 100%;
+            height: 220px;
+        }
+        .main-4-bottom .drag_div>div.six img, .drag_div>div.seven img, .drag_div>div.nine img, .drag_div>div.ten img {
+            width: 100%;
+            height: 160px;
+        }
+
+        .lk_carouse5{
+           text-align: center;
+            margin-bottom: 30px;
+            margin-right: 100px;
+        }
+        /*////瀑布流*/
+
+        /*尾部*/
+        .lk_carouse6{
+            margin-bottom: 30px;
+        }
+
+        .lk_carouse7{
+            width: 100%;
+            height: 100px;
+            background-color: rgba(0,0,0,0.8);
+            color: #d0e9c6;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .lk_carouse7 .main-7-left-top{
+            margin: 5px;
+        }
+
+        .lk_carouse7 .main-7-left-top a{
+            margin-right: 10px;
+        }
+        .lk_carouse7  .main-7-left-bottom{
+            color: #1867b7;
+
+        }
+
+        .lk_carouse7 .main-7-rigth a{
+            float: right;
+            margin-left: 20px;
+
+        }
+
+    </style>
+
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/tuozhuai.js"></script>
+    <script src="js/move.js"></script>
+
+</head>
+<body>
+
+<header id="lk_header">
+    <div class="top-bar navbar-inverse">
+        <div class="container">
+            <div class="row">
+                <div class="top-bar-1 col-md-7 " >
+                    <div href="" class="text-muted text-center">
+                        <span>慕课网首页</span>
+                        <span>免费课程</span>
+                        <span>实战课程</span>
+                        <span>就业班</span>
+                        <span>笔录</span>
+                    </div>
+                </div>
+                <div class="top-bar-2 col-md-5 hidden-sm hidden-xs pull-right">
+                    <div class="top-bar-1-1 pull-right text-center">
+                        <a class="a-img ">
+                            <span class="text-muted" >下载app</span>
+                            <img  class="img1" src="images/ewm_xzh.jpg" alt="" style="width: 75px;height: 75px">
+                        </a>
+                        <img src="images/sousuo.png" alt="" style="width: 20px;margin-left: 20px">
+                        <img src="images/gouwuche.png" alt="" style="width: 20px;margin-left: 20px">
+                        <a href="" class="text-muted" >登录</a>
+                        <a href="" class="text-muted">注册</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="lk_carousel">
+    <div class="main" >
+        <div class="container">
+            <div class="row ">
+                <div class="main-left col-md-5">
+                    <a href=""><span class="text-warning" style="font-size: 30px;margin-right: 40px;">实战步伐</span><span class="text-muted" style="font-size: 20px">学以致用</span></a>
+                </div>
+            <div class="col-md-7 ">
+                <form class="main-top navbar-form navbar-left pull-right  hidden-xs hidden-sm" role="search">
+                    <div class="form-group ">
+                        <input type="text" class="form-control" style="width: 370px" placeholder="搜索感兴趣的内容">
+                    </div>
+                    <button type="submit" class="btn btn-default glyphicon glyphicon-zoom-in"></button>
+                </form>
+                <div class="main-bottom  hidden-xs hidden-sm" >
+                    <span>热搜：</span>
+                    <a href="">vue</a>
+                    <a href="">Python</a>
+                    <a href="">Java</a>
+                    <a href="">mysal</a>
+                    <a href="">flutter</a>
+                    <a href="">React</a>
+                    <a href="">更多</a>
+                </div>
+            </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section class="lk_carouse2">
+    <div class="container ">
+        <div class="row">
+            <div class="main-2">
+                <ul>
+                    <li >全部</li>
+                    <li class="text-warning" style="border-bottom: 1px solid #8A6D3B">前端开发</li>
+                    <li>后端开发</li>
+                    <li>移动开发</li>
+                    <li>计算机基础</li>
+                    <li>前沿技术</li>
+                    <li>云计算&大数据</li>
+                    <li>数据库</li>
+                    <li>运维&测试</li>
+                    <li>UI设计&多媒体</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="lk_carouse3">
+     <div class="container">
+         <div class="row">
+             <div class="main-3-1" >
+                 <ul class="nav">
+                     <li role="presentation" class="text-warning">不限</li>
+                     <li role="presentation" class="text-muted">HTML/CSS</li>
+                     <li role="presentation" class="text-muted">JavaScript</li>
+                     <li role="presentation" class="text-muted">Vue.js</li>
+                     <li role="presentation" class="text-muted">React.JS</li>
+                     <li role="presentation" class="text-muted">Angular</li>
+                     <li role="presentation" class="text-muted">Node.js</li>
+                     <li role="presentation" class="text-muted">Jquery</li>
+                     <li role="presentation" class="text-muted">小程序</li>
+                     <li role="presentation" class="text-muted">WebApp</li>
+                     <li role="presentation" class="text-muted">前端工具</li>
+                 </ul>
+             </div>
+             <div class="main-3-2">
+                 
+             </div>
+         </div>
+     </div>
+</section>
+<section class="lk_carouse4">
+    <div class="container">
+        <div class="row">
+            <div class="main-4-top">
+                <div class="main-4-left col-md-6 pull-left">
+                    <a href="" class="text-muted">最新</a>
+                    <a href="" class="text-muted">销售</a>
+                    <a href="" class="text-muted">升级</a>
+                </div>
+                <div class="main-4-rigth col-md-6 ">
+                    <ul class="nav nav-pills pull-right  hidden-xs hidden-sm">
+                        <li role="presentation" class="active"><a href="#">学习路线</a></li>
+                        <li role="presentation"><a href="#">新课预告</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="lk_carouse5">
+    <div class="container">
+        <div class="row">
+            <div class=" main-4-bottom">
+                <div class="drag_div" id="drag_div">
+                    <div class="one">
+                        <p class="img_100 margin_bottom_15"><img src="images/a4.png"></p>
+                        <p class="text_center">大前端：前端全栈加强版！前端全栈+全周期+多端应用</p>
+                    </div>
+                    <div class="two">
+                        <p class="img_100 margin_bottom_15"><img src="images/a2.png"></p>
+                        <p class="text_center">Node.js+Koa2框架生态实战-从零模拟新浪微博</p>
+                    </div>
+                    <div class="three">
+                        <p class="img_100 margin_bottom_15"><img src="images/a3.png"></p>
+                        <p class="text_center">Electron+React+七牛云,实战跨平台桌面</p>
+                    </div>
+                    <div class="four">
+                        <p class="img_100 margin_bottom_15"><img src="images/a1.png"></p>
+                        <p class="text_center">微信小程序开发-从0打造云音乐全栈小程序</p>
+                    </div>
+                    <div class="five">
+                        <p class="img_100 margin_bottom_15"><img src="images/a5.png"></p>
+                        <p class="text_center">混合开发入门，主流开发方案实战京东移动端APP</p>
+                    </div>
+                    <div class="six">
+                        <p class="img_100 margin_bottom_15"><img src="images/a6.png"></p>
+                        <p class="text_center">零基础入门实战mpvue2.0多端小程序框架</p>
+                    </div>
+                    <div class="seven">
+                        <p class="img_100 margin_bottom_15"><img src="images/a7.png"></p>
+                        <p class="text_center">前端要学的测试课，从Jest入门到TDD/BDD双实战</p>
+                    </div>
+                    <div class="eight">
+                        <p class="img_100 margin_bottom_15"><img src="images/a8.png"></p>
+                        <p class="text_center">Node.js卡法仿知乎服务端，深入理解RESTful API</p>
+                    </div>
+                    <div class="nine">
+                        <p class="img_100 margin_bottom_15"><img src="images/a9.png"></p>
+                        <p class="text_center">商业级支付宝小程序入门与实践</p>
+                    </div>
+                    <div class="ten">
+                        <p class="img_100 margin_bottom_15"><img src="images/a10.png"></p>
+                        <p class="text_center">下一代前端开发语言，TypeSc从零重构axios</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="lk_carouse6">
+    <div class="container">
+        <div class="row">
+            <div class="main-6-left col-md-6 pull-left" >
+                <img src="images/Python.jpg" alt="" style="width: 540px;border-bottom-left-radius: 6px;border-top-right-radius: 6px;border-bottom-right-radius: 6px;border-top-left-radius: 6px">
+            </div>
+            <div class="main-6-rigth col-md-6 ">
+                <img src="images/Vue.jpg" alt="" style="width: 540px;border-bottom-left-radius: 6px;border-top-right-radius: 6px;border-bottom-right-radius: 6px;border-top-left-radius: 6px">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="lk_carouse7">
+    <div class="container">
+        <div class="row">
+           <div class="main-7-left col-md-7">
+             <div class="main-7-left-top">
+                 <a href="">网站首页</a><a href="">企业合作</a><a href="">人才招聘</a><a href="">友情链接</a><a
+                     href="">讲师招募</a><a href="">帮助中心</a><a href="">意见反馈</a><a href="">慕课大学</a>
+             </div>
+               <div class="main-7-left-bottom">
+                   <span>Cpyrigth | @2019 imooc.com All Rights Reserved | 京ICP备 12003892号 | 广州大学松田学院</span>
+               </div>
+           </div>
+           
+            <div class="main-7-rigth col-md-5 hidden-sm hidden-xs">
+                <a href=""><img src="images/weixin.png" alt="" ></a>
+                <a href=""><img src="images/qq.png" alt="" ></a>
+                <a href=""><img src="images/xinlang.png" alt="" ></a>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
+

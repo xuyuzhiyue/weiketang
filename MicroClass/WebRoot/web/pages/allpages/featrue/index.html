@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>实战课程</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:700,300,600,800,400' rel='stylesheet' type='text/css'>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.flexisel.js"></script>
+
+</head>
+<body>
+<!-- header -->
+<div class="header">
+    <div class="container">
+        <div class="logo">
+            <a href=""><img src="img/logo.png" class="img-responsive" alt=""></a>
+        </div>
+        <div class="head-nav">
+            <span class="menu"> </span>
+            <ul class="cl-effect-16">
+                <li class="active"><a href="" data-hover="Web前端攻城狮">Web前端攻城狮</a></li>
+                <li><a href=" " data-hover="Java攻城狮">Java攻城狮</a></li>
+                <li><a href=" " data-hover="Python攻城狮">Python攻城狮</a></li>
+                <li><a href="" data-hover="Andrioid攻城狮">Andrioid攻城狮</a></li>
+                <li><a href=" " data-hover="PHP攻城狮">PHP攻城狮</a></li>
+                <li><a href=" " data-hover="数据库攻城狮">数据库攻城狮</a></li>
+            </ul>
+            <!-- script-for-nav -->
+            <script>
+                $( "span.menu" ).click(function() {
+                    $( ".head-nav ul" ).slideToggle(300, function() {
+                        // Animation complete.
+                    });
+                });
+            </script>
+            <!-- script-for-nav -->
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+</div>
+<!-- header -->
+<!-- banner -->
+<div class="banner">
+    <div class="container">
+        <ul id="flexiselDemo3">
+            <li><a href="">
+                <div class="banner-1">
+                    <img src="img/1.jpg" class="img-responsive" alt="">
+                    <div class="banner-bottom">
+                        <h4>Git原理详情与实操指南</h4>
+                        <p>idaxia/PHP高级工程师</p>
+                    </div>
+                </div></a>
+            </li>
+            <li>
+                <a href="">
+                    <div class="banner-1">
+                        <img src="img/2.jpg" class="img-responsive" alt="">
+                        <div class="banner-bottom">
+                            <h4>设计模式深度解析34将</h4>
+                            <p>王磊</p>
+                        </div>
+                    </div></a>
+            </li>
+            <li>
+                <a href="">
+                    <div class="banner-1">
+                        <img src="img/3.jpg" class="img-responsive" alt="">
+                        <div class="banner-bottom">
+                            <h4>面试官系统精选Java源码及大厂真题</h4>
+                            <p>文贺/知名电商Java技术专家</p>
+                        </div>
+                    </div></a>
+            </li>
+            <li>
+                <a href="">
+                    <div class="banner-1">
+                        <img src="img/4.jpg" class="img-responsive" alt="">
+                        <div class="banner-bottom">
+                            <h4>一线数据库工程师带你深入理解MySQ</h4>
+                            <p>马听老师/一线数据库工程师</p>
+                        </div>
+                    </div></a>
+            </li>
+        </ul>
+        <script type="text/javascript">
+            $(window).load(function() {
+                $("#flexiselDemo3").flexisel({
+                    visibleItems: 4,
+                    animationSpeed: 1000,
+                    autoPlay: true,
+                    autoPlaySpeed: 3000,
+                    pauseOnHover: true,
+                    enableResponsiveBreakpoints: true,
+                    responsiveBreakpoints: {
+                        portrait: {
+                            changePoint:480,
+                            visibleItems: 2
+                        },
+                        landscape: {
+                            changePoint:640,
+                            visibleItems: 3
+                        },
+                        tablet: {
+                            changePoint:768,
+                            visibleItems: 3
+                        }
+                    }
+                });
+            });
+        </script>
+        <div class="clearfix"> </div>
+    </div>
+</div>
+<!-- banner -->
+<!-- Here -->
+<div class="Here">
+    <div class="workes">
+        <h2><a href="">微课堂世界</a></h2>
+    </div>
+    <div class="container">
+        <div class="col-md-3 here-1">
+            <div class="here-left">
+                <i class="bulb"></i>
+            </div>
+            <div class="here-right">
+                <h5>前端开发</h5>
+            </div>
+            <div class="clearfix"> </div>
+            <p>HTML/CSS    JavaScript    Vue.js    React.JS    Angular    Node.js    jQuery    WebApp    小程序    前端工具</p>
+        </div>
+        <div class="col-md-3 here-1">
+            <div class="here-left">
+                <i class="lock"></i>
+            </div>
+            <div class="here-right">
+                <h5>后端开发</h5>
+            </div>
+            <div class="clearfix"> </div>
+            <p>Java    SpringBoot    Spring Cloud    SSM    Python   爬虫    Django    Flask    Tornado    Go    PHP    Swoole    C    C++</p>
+        </div>
+        <div class="col-md-3 here-1">
+            <div class="here-left">
+                <i class="pen"></i>
+            </div>
+            <div class="here-right">
+                <h5>运维$测试/数据库</h5>
+            </div>
+            <div class="clearfix"> </div>
+            <p>运维  自动化运维  中间件  Linux  测试  功能测试  性能测试  自动化测试  接口测试/MySQL  Redis  MongoDB  </p>
+        </div>
+        <div class="col-md-3 here-1">
+            <div class="here-left">
+                <i class="adm"></i>
+            </div>
+            <div class="here-right">
+                <h5>移动开发&大数据</h5>
+            </div>
+            <div class="clearfix"> </div>
+            <p>Android  IOS  Reacht native  lonic 大数据  Hadoop  Spark  Hbase  Flink  Strom  阿里云  Docker Kubernetes</p>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+</div>
+<!-- Here -->
+<!-- company -->
+<div class="company">
+    <div class="container">
+        <div class="col-md-4 company-1">
+            <h3>热门</h3>
+            <div class="our">
+                <p>Vue.js从入门到全栈开发：优秀的前端工程师都要掌握一门后端语言，从vue到node，前后端通吃，提高前端工程师的竞争力</p>
+            </div>
+            <div class="our">
+                <p>Java从初级到高级的进阶面试线路图：路线吃透面试学问，伴随身为Java工程师的你一路成长，高效充分准备面试拿offer</p>
+            </div>
+            <div class="our">
+                <p>突破Android高级面试学习路线：路线汇集Android高级工程师面试的关键技能，还原面试官视角，助力面试顺利通过</p>
+            </div>
+        </div>
+        <div class="col-md-4 company-1">
+            <h3>前端</h3>
+            <div class="our">
+                <p>微信小程序从0基础到精通</p>
+                <h6>一站式掌握小程序生态，打造站内零基础精通小程序的最佳路径</h6>
+            </div>
+            <div class="our">
+                <p>Node.js零基础从入门到玩转 </p>
+                <h6>本路线从Node.js基础到热门框架应用，从理解到实战异步到位</h6>
+            </div>
+            <div class="our">
+                <p>React.js框架从入门到全栈开发</p>
+                <h6></h6>
+            </div>
+        </div>
+        <div class="col-md-4 company-1">
+            <h3></h3>
+            <div class="sleek">
+                <h5><a href="">从零开始一战搞定Pyt Django开发</a></h5>
+                <h6>路线专为零Django基础学员定制，层层深入，助你熟练掌握Django应用技能</h6>
+            </div>
+            <div class="sleek">
+                <h5><a href=""></a></h5>
+                <h6>运用SpringCloud完成企业级项目微服务改造，不断提升，掌握几大特色模块和主流技术组合</h6>
+            </div>
+            <div class="sleek">
+                <h5><a href="">SpringBoot从入门到精通</a></h5>
+                <h6>本路线旨在帮助想快速掌握Spring Boot应用的工程师，全方面多角度带你升级</h6>
+            </div>
+            <div class="sleek">
+                <h5><a href="">大数据零基础入门求职路线</a></h5>
+                <h6>路线面向零基础用户，从入门到实现大数据综合实战，助力大家快速入行转型</h6>
+            </div>
+            <div class="sleek">
+                <h5><a href="">大数据容器实践从入门到进阶</a></h5>
+                <h6>本路线以开发的视角逐层深入，从语言基础开始，到最终完成企业级应用容器化部署</h6>
+            </div>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+</div>
+<!-- company -->
+<!-- later -->
+<div class="later">
+    <div class="container">
+        <div class="col-md-6 later-left">
+            <li><h5>微课堂</h5></li>
+            <li>
+                <div class="stay">
+                    <div class="stay-left">
+                        <form>
+                            <input type="text" placeholder="搜索您感兴趣的内容" required="">
+                        </form>
+                    </div>
+                    <div class="button">
+                        <form>
+                            <input type="submit" value="搜索">
+                        </form>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </li>
+            <div class="clearfix"> </div>
+        </div>
+        <div class="col-md-6 later-right">
+            <li><i class="ttt"></i></li>
+            <li><h6>微课堂与你一起学习 <span><a href="#">@graphicsfuel</a><span></h6></li>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+</div>
+<!-- later -->
+<!-- footer -->
+<div class="footer">
+    <div class="container">
+        <div class="col-md-3 footer-1">
+            <h3>Company</h3>
+            <div class="foot-nav">
+                <ul>
+                    <li class="active"><a href="index.html">home</a></li>
+                    <li><a href="">about us</a></li>
+                    <li><a href="">portfolio</a></li>
+                    <li><a href="">services</a></li>
+                    <li><a href="">blog</a></li>
+                    <li><a href="">contact us</a></li>
+                    <div class="clearfix"> </div>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-3 footer-1">
+            <h3>Social Network</h3>
+            <p>Find us on these social network sites</p>
+            <div class="social-ic">
+                <ul>
+                    <li><a href="#"><i class="facebok"> </i></a></li>
+                    <li><a href="#"><i class="twiter"> </i></a></li>
+                    <li><a href="#"><i class="in"> </i></a></li>
+                    <li><a href="#"><i class="pp"> </i></a></li>
+                    <li><a href="#"><i class="goog"> </i></a></li>
+                    <div class="clearfix"></div>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-3 footer-1">
+            <h3>Location</h3>
+            <p>123, street name</p>
+            <p>   landmark,</p>
+            <p>   California 123</p>
+            <p>   Tel: 123-456-7890</p>
+            <p>   Fax. +123-456-7890</p>
+        </div>
+        <div class="col-md-3 footer-1">
+            <h3>Text Widget</h3>
+            <p>Proin enim velit, fermentum at malesuada in, porta vel ipsum. Pellentesque a erat sit amet lorem rutrum venenatis sed laoreet dui. </p>
+        </div>
+        <div class="clearfix"> </div>
+        <div class="foot-bottom">
+            <p>Copyrights © 2015 EleganceMedia. All rights reserved | Template by <a href="http://w3layouts.com/">W3layouts</a></p>
+        </div>
+    </div>
+</div>
